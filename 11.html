@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI';
+    background:#0f172a;
+    color:white;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:#020617;
+}
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+.hero img{
+    width:150px;
+    border-radius:50%;
+    border:3px solid cyan;
+}
+.hero h1{
+    font-size:40px;
+}
+
+/* Section */
+.section{
+    padding:50px;
+    text-align:center;
+}
+
+/* Cards */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    width:150px;
+    transition:0.3s;
+}
+.card:hover{
+    transform:scale(1.1);
+    background:cyan;
+    color:black;
+}
+
+/* Button */
+button{
+    padding:10px 20px;
+    background:cyan;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+<div>My Portfolio</div>
+<div>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+<img src="your-image.jpg">
+<h1 id="typing"></h1>
+<p>🚀</p>
+</div>
+
+<!-- About -->
+<div class="section" id="about">
+<h2>About Me</h2>
+<p>I am a student passionate about coding and building websites.</p>
+</div>
+
+<!-- Skills -->
+<div class="section" id="skills">
+<h2>My Skills</h2>
+
+<div class="cards">
+<a href="#">
+<div class="card">HTML</div>
+</a>
+
+<a href="#">
+<div class="card">CSS</div>
+</a>
+</div>
+
+</div>
+
+<!-- Contact -->
+<div class="section" id="contact">
+<h2>Contact Me</h2>
+<p>Email: malik@gmail.com</p>
+
+<button onclick="msg()">Click Me</button>
+</div>
+
+<script>
+// Typing effect
+let txt="Hi, I am Sakshi";
+let i=0;
+
+function type(){
+if(i<txt.length){
+document.getElementById("typing").innerHTML += txt.charAt(i);
+i++;
+setTimeout(type,100);
+}
+}
+type();
+
+// Button
+function msg(){
+alert("Thanks for visiting!");
+}
+</script>
+
+</body>
+</html>
